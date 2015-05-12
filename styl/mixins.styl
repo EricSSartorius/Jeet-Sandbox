@@ -1,0 +1,17 @@
+vendor(property, arg)
+	{property} arg
+	-webkit-{property} arg
+	-moz-{property} arg
+
+border-radius(radius = 5px)
+	vendor('border-radius', radius)
+
+transition(args)
+	vendor('transition', args)
+
+test(var)
+	if var > 5
+		background red
+	else
+		background blue
+
