@@ -16,22 +16,30 @@ marg(a)
 	return a a
 	
 rupture.scale = 0 400px 600px 800px 1050px 1800px
-rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'hd'
+rupture.scale-names = 'xs' 'sm' 'm' 'l' 'xl' 'hd'
 
 section
 	center(960px)
 aside
 	col(1/3)
+	shift(2/3)
+	+below(sm)
+		stack()
+		unshift()
 article
 	col(2/3)
+	shift(-1/3)
+	+below(sm)
+		stack()
+		unshift()
+	img
+		max-width: 100%
 
 body
-	background linear-gradient(top, white, black)
+	background linear-gradient(top, white, red)
 	color shade(red, 50%)  //adds shade to the color passed
-	fixed top 20px left 2%
 	font-family $futura
 	border solid 1px complement(@color) //mixin created from previous color, uses complementary color
-	margin-left add(1rem,2,3) //uses made function to add px together and make a margin number
 	+below('m')
 		color red
 	+above('xl')
