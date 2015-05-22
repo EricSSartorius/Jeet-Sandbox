@@ -9,15 +9,13 @@ edit()
 
 t-presets(1)
 
-add(a, b, c) 
-	a + b+ c 
-		
 marg(a)	
 	return a a
 	
 rupture.scale = 0 400px 600px 800px 1050px 1800px
-rupture.scale-names = 'xs' 'sm' 'm' 'l' 'xl' 'hd'
-
+rupture.scale-names = 'xs' 'sm' 'md' 'lg' 'xl' 'hd'
+ 
+ 
 section
 	center(960px)
 aside
@@ -33,26 +31,5 @@ article
 		stack()
 		unshift()
 	img
-		max-width: 100%
+		max-width 100%
 
-body
-	background linear-gradient(top, white, red)
-	color shade(red, 50%)  //adds shade to the color passed
-	font-family $futura
-	border solid 1px complement(@color) //mixin created from previous color, uses complementary color
-	+below('m')
-		color red
-	+above('xl')
-		color blue
-	main
-		margin marg(10px) //creates equal margins with marg function
-		background rgba(blue,0.9) //function that can change opacity of color
-		color grayscale(blue)  //create grayscale of color passed
-		transition(all 0.2s ease)
-		border invert(@color) //invert function
-		border-radius 20px  //overwrites border-radius variable
-		test(6)
-		clearfix()
-		a
-			overflow ellipsis
-			shadow-stroke(blue)
