@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 
 // Clean
 gulp.task('clean', function () {  
-  return gulp.src('**/*', {read: false})
+  return gulp.src('js/*.js', {read: false})
     .pipe(clean());
 });
 
@@ -61,9 +61,7 @@ gulp.task('images', function() {
     	.pipe(notify({ message: 'Images donneeee!' }));
 });
  
-gulp.task('clean', function(cb) {
-    del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img'], cb)
-});
+
 
  
 // Default task
