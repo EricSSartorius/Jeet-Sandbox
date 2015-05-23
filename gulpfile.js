@@ -87,6 +87,6 @@ gulp.task('watch', function() {
   livereload.listen();
  
   // Watch css files, reload on change
-  gulp.watch(['images/**/*', 'scripts/**/*.js','styles/**/*.css', '**/*.html']).on('change', livereload.changed);
+  gulp.watch(['./**/*']).on('change', livereload.changed);
  
 });
