@@ -1,10 +1,10 @@
 // Load Plugins
 var gulp = require('gulp'),
-	stylus = require('gulp-stylus'),
-	typographic = require('typographic'),
-	nib = require('nib'),
-	rupture = require('rupture'),
-	jeet= require('jeet');
+    stylus = require('gulp-stylus'),
+    typographic = require('typographic'),
+    nib = require('nib'),
+    rupture = require('rupture'),
+    jeet= require('jeet');
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
@@ -19,8 +19,11 @@ var gulp = require('gulp'),
     del = require('del');
 
 
-
-
+// Clean
+gulp.task('clean', function () {  
+  return gulp.src('**/*', {read: false})
+    .pipe(clean());
+});
 
 // Styles
 gulp.task('styles', function() {
@@ -42,10 +45,10 @@ gulp.task('scripts', function() {
   		.pipe(jshint())
     	.pipe(jshint.reporter('default'))
     	.pipe(concat('main.js'))
-    	.pipe(gulp.dest('./scripts'))
+    	.pipe(gulp.dest('./js'))
     	.pipe(rename({ suffix: '.min' }))
     	.pipe(uglify())
-    	.pipe(gulp.dest('./scripts'))
+    	.pipe(gulp.dest('./js'))
     	.pipe(notify({ message: 'Scripts donnneee!' }));
 });
 
@@ -58,7 +61,6 @@ gulp.task('images', function() {
     	.pipe(notify({ message: 'Images donneeee!' }));
 });
  
-// Clean
 gulp.task('clean', function(cb) {
     del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img'], cb)
 });
@@ -84,7 +86,7 @@ gulp.task('watch', function() {
   // Create LiveReload server
   livereload.listen();
  
-  // Watch any files in dist/, reload on change
-  gulp.watch(['dist/**']).on('change', livereload.changed);
+  // Watch css files, reload on change
+  gulp.watch(['images/**/*', 'scripts/**/*.js','styles/**/*.css', '**/*.html']).on('change', livereload.changed);
  
 });
