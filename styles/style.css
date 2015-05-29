@@ -42,13 +42,13 @@ template {
 section {
   *zoom: 1;
   width: auto;
-  max-width: 960px;
+  max-width: 1000px;
   float: none;
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 section:before,
 section:after {
@@ -66,8 +66,9 @@ aside {
   width: 31.33333333333333%;
   margin-left: 0%;
   margin-right: 3%;
-  position: relative;
-  left: 68.66666666666666%;
+}
+aside a {
+  display: block;
 }
 aside:before,
 aside:after {
@@ -88,8 +89,6 @@ aside:last-child {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    position: static;
-    left: 0;
   }
   aside:first-child {
     margin-left: auto;
@@ -97,8 +96,11 @@ aside:last-child {
   aside:last-child {
     margin-right: auto;
   }
+  aside a {
+    display: inline;
+  }
 }
-article {
+.posts {
   *zoom: 1;
   float: left;
   clear: none;
@@ -106,38 +108,82 @@ article {
   width: 65.66666666666666%;
   margin-left: 0%;
   margin-right: 3%;
-  position: relative;
-  left: -34.33333333333333%;
 }
-article:before,
-article:after {
+.posts:before,
+.posts:after {
   content: '';
   display: table;
 }
-article:after {
+.posts:after {
   clear: both;
 }
-article:last-child {
+.posts:last-child {
   margin-right: 0%;
 }
 @media only screen and (max-width: 600px) {
-  article {
+  .posts {
     display: block;
     clear: both;
     float: none;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    position: static;
-    left: 0;
   }
-  article:first-child {
+  .posts:first-child {
     margin-left: auto;
   }
-  article:last-child {
+  .posts:last-child {
     margin-right: auto;
   }
 }
-article img {
-  max-width: 100%;
+.post {
+  *zoom: 1;
+}
+.post:before,
+.post:after {
+  content: '';
+  display: table;
+}
+.post:after {
+  clear: both;
+}
+.post img {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 30.28764805414551%;
+  margin-left: 0%;
+  margin-right: 4.568527918781727%;
+}
+.post img:before,
+.post img:after {
+  content: '';
+  display: table;
+}
+.post img:after {
+  clear: both;
+}
+.post img:last-child {
+  margin-right: 0%;
+}
+.post article {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 65.14382402707275%;
+  margin-left: 0%;
+  margin-right: 4.568527918781727%;
+}
+.post article:before,
+.post article:after {
+  content: '';
+  display: table;
+}
+.post article:after {
+  clear: both;
+}
+.post article:last-child {
+  margin-right: 0%;
 }

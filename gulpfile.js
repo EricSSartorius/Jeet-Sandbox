@@ -36,7 +36,7 @@ gulp.task('styles', function() {
     	.pipe(rename({ suffix: '.min' }))
     	.pipe(minifycss())
     	.pipe(gulp.dest('./styles'))
-    	.pipe(notify({ message: 'Styles donnneeee!' }));
+    	.pipe(notify({ message: 'Styles done bitch!' }));
 });
 
 // Scripts
@@ -49,7 +49,7 @@ gulp.task('scripts', function() {
     	.pipe(rename({ suffix: '.min' }))
     	.pipe(uglify())
     	.pipe(gulp.dest('./js'))
-    	.pipe(notify({ message: 'Scripts donnneee!' }));
+    	.pipe(notify({ message: 'Scripts done bitch!' }));
 });
 
  
@@ -58,9 +58,14 @@ gulp.task('images', function() {
   	return gulp.src('images/**/*')
     	.pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     	.pipe(gulp.dest('./images'))
-    	.pipe(notify({ message: 'Images donneeee!' }));
+    	.pipe(notify({ message: 'Images done bitch!' }));
 });
  
+// Scripts
+gulp.task('html', function() {
+    return gulp.src('**/*.html')
+      .pipe(notify({ message: 'html done bitch!' }));
+});
 
 
  
@@ -71,6 +76,9 @@ gulp.task('default', ['clean'], function() {
  
 // Watch
 gulp.task('watch', function() {
+
+   //watch html files
+  gulp.watch('**/*.html', ['html']);
  
   // Watch .styl files
   gulp.watch('**/*.styl', ['styles']);
