@@ -1,3 +1,41 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+details,
+section,
+summary,
+aside,
+main,
+menu,
+nav,
+figcaption,
+figure,
+footer,
+header,
+hgroup {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
 * {
   margin: 0;
   padding: 0;
@@ -304,25 +342,7 @@ aside .nav2 a {
 aside .nav2 a:hover {
   background: rgba(14,48,71,0.7);
 }
-@media only screen and (max-width: 600px) {
-  .social {
-    display: block;
-    clear: both;
-    float: none;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    position: static;
-    left: 0;
-  }
-  .social:first-child {
-    margin-left: auto;
-  }
-  .social:last-child {
-    margin-right: auto;
-  }
-}
-.social a {
+aside .social a {
   *zoom: 1;
   float: left;
   clear: none;
@@ -339,18 +359,18 @@ aside .nav2 a:hover {
   border-right: 0;
   color: rgba(10,35,52,0.7);
 }
-.social a:before,
-.social a:after {
+aside .social a:before,
+aside .social a:after {
   content: '';
   display: table;
 }
-.social a:after {
+aside .social a:after {
   clear: both;
 }
-.social a:last-child {
+aside .social a:last-child {
   border-right: 1px solid #ddd;
 }
-.social a:hover {
+aside .social a:hover {
   background: #ccc;
   color: #fff;
 }
