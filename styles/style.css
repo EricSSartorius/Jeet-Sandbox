@@ -413,7 +413,7 @@ html {
 }
 #header {
   background: #0a2334;
-  border-bottom: solid 5px #2c719e;
+  border-bottom: solid 5px blue2;
 }
 #header .head {
   *zoom: 1;
@@ -612,25 +612,32 @@ html {
   transition: all 0.1s ease;
 }
 #about {
-  text-align: center;
   background: #fff;
-  color: rgba(10,35,52,0.7);
   padding-bottom: 75px;
   padding-top: 75px;
 }
-#work {
+#about h1 {
   text-align: center;
+  color: #2c719e;
+}
+#work {
   background: #2c719e;
-  color: #fff;
   padding-bottom: 75px;
   padding-top: 75px;
+}
+#work h1 {
+  color: #fff;
+  text-align: center;
 }
 #contact {
   text-align: center;
   background: #fff;
-  color: rgba(10,35,52,0.7);
   padding-bottom: 75px;
   padding-top: 75px;
+}
+#contact h1 {
+  color: #2c719e;
+  padding-bottom: 50px;
 }
 #contact a {
   text-align: center;
