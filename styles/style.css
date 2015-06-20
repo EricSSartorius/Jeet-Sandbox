@@ -632,7 +632,7 @@ html {
 #about #lang:last-child {
   margin-right: 0%;
 }
-#about #lang >div a {
+#about #lang >div p {
   *zoom: 1;
   float: left;
   clear: none;
@@ -646,17 +646,20 @@ html {
   color: #0a2334;
   text-decoration: none;
 }
-#about #lang >div a:before,
-#about #lang >div a:after {
+#about #lang >div p:before,
+#about #lang >div p:after {
   content: '';
   display: table;
 }
-#about #lang >div a:after {
+#about #lang >div p:after {
   clear: both;
 }
-#about #lang >div a:hover {
+#about #lang >div p:hover {
   border-bottom: 3px solid #0a2334;
   margin-bottom: -3px;
+}
+.content {
+  display: none;
 }
 #work {
   *zoom: 1;
