@@ -1,0 +1,191 @@
+@import 'typographic'
+// @import '**' 
+@import 'nib'
+@import 'jeet'
+
+
+// Mixins
+vendor(property, arg)
+	{property} arg
+	-webkit-{property} arg
+	-moz-{property} arg
+
+border-radius(radius = 5px)
+	vendor('border-radius', radius)
+
+transition(args)
+	vendor('transition', args)
+	
+section-padding()
+	padding-top 100px
+	padding-bottom 100px	
+
+
+// Variables
+darkblue = #0a2334
+blue= lighten(#1b4662, 20%)
+red = #BE2525
+grey = #E8E8E8
+
+
+// Scale
+rupture.scale = 0 400px 600px 800px 1050px 1800px
+rupture.scale-names = 'xs' 'sm' 'md' 'lg' 'xl' 'hd'
+
+normalize-base()
+normalize-html5()
+//edit()
+typographic()
+ 
+*
+	margin 0
+	padding 0
+	box-sizing border-box
+	font-family 'Lato', sans-serif
+
+h1, h4
+	font-family 'Lato', sans-serif
+
+html
+	background red
+	
+
+#top-menu
+    position fixed
+    z-inde: 1
+    background darkblue
+    left 0
+    right 0
+    top 0
+
+#top-menu 
+	.logo, a 
+		transition(all, .5s, ease-out)
+	
+.logo
+	margin-top 10px
+	fill blue
+	&:hover
+		fill white
+	
+#header
+	stack()
+	background darkblue
+	#top-menu
+		cf()
+		.title
+			col(1/3)
+			+below('md')
+				stack()
+				text-align center
+				padding-right 30px	
+			padding-left 30px
+			color white	
+		.menu
+			col(1/3, offset: 1/3)
+			+below('md')
+				col()
+			#nav
+				stack()
+				>div
+					a
+						span(1/4)
+						padding 15px 30px 15px 0
+						text-align center
+						text-decoration none
+						color #fff
+						&:hover
+							color blue
+			
+#about
+	stack()
+	cf()
+	h1
+		text-align center
+		color blue
+	>div
+		p
+			col(1/3)
+			color blue	
+	background grey
+	section-padding()
+	padding-left 30px
+	padding-right 30px
+	#lang
+		col(1/3, offset: 1/3)
+		>div
+			p 
+				span(1/3)
+				font-size 0.7em
+				text-align center
+				padding 10px 0
+				color darkblue
+				text-decoration none
+				&:hover 
+					border-bottom 2px solid darkblue
+					margin-bottom -2px
+					transition(all, .2s, ease-out)
+					
+.language1
+	display block
+
+.language
+    display none
+
+//p.active
+//	border-bottom 3px solid blue
+//	margin-bottom -3px
+
+#work
+	cf()
+	stack()
+	h1
+		color white
+		text-align center
+	background blue
+	section-padding()
+	.gallery
+		>img
+			span(1/4, cycle: 4)
+			padding 10px
+			+below('md')
+				span(1/2, uncycle: 4, cycle: 2)
+			+below('sm')
+				span(1, uncycle: 2, cycle 1)
+
+#resume
+	stack()
+	h1
+		color blue
+	text-align center
+	background white
+	section-padding()
+
+#contact
+	stack()
+	h1
+		color blue
+	h4
+		color blue
+	text-align center
+	background grey
+	section-padding()
+	.fa-stack
+		padding 0 50px		
+	a
+		text-align center
+		&:hover
+			opacity 0.8
+		#facebook
+			color #3B5998
+		#twitter
+			color #00A5E5
+		#github
+			color #333
+
+.footer
+	stack()
+	text-align center
+	background darkblue
+	color white
+	section-padding()

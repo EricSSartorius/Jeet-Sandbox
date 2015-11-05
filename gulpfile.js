@@ -27,7 +27,7 @@ gulp.task('clean', function () {
 
 // Styles
 gulp.task('styles', function() {
-	return gulp.src('style.styl')
+	return gulp.src('styl/style.styl')
 		.pipe(stylus({
 			use: [typographic(), nib(), rupture(), jeet()]}))
 		.pipe(gulp.dest('./styles'))
@@ -61,9 +61,9 @@ gulp.task('images', function() {
     	.pipe(notify({ message: 'イメージ完了!' }));
 });
  
-// Scripts
+// Html
 gulp.task('html', function() {
-    return gulp.src('**/*.html')
+    return gulp.src('index.html')
       .pipe(notify({ message: 'html完了!' }));
 });
 
@@ -78,10 +78,10 @@ gulp.task('default', ['clean'], function() {
 gulp.task('watch', function() {
 
    //watch html files
-  gulp.watch('**/*.html', ['html']);
+  gulp.watch('index.html', ['html']);
  
   // Watch .styl files
-  gulp.watch('**/*.styl', ['styles']);
+  gulp.watch('styl/**/*.styl', ['styles']);
  
   // Watch .js files
   gulp.watch('scripts/**/*.js', ['scripts']);
@@ -93,6 +93,6 @@ gulp.task('watch', function() {
   livereload.listen();
  
   // Watch css files, reload on change
-  gulp.watch(['./**/*']).on('change', livereload.changed);
+  // gulp.watch(['styles/**/*.css']).on('change', livereload.changed);
  
 });

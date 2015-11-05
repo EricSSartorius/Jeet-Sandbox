@@ -394,6 +394,8 @@ td {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
 h1,
@@ -403,18 +405,23 @@ h4 {
 html {
   background: #be2525;
 }
-#top-menu {
-  position: fixed;
-  z-inde: 1;
-  background: #0a2334;
-  left: 0;
-  right: 0;
-  top: 0;
-}
 #top-menu .logo,
-#top-menu a {
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+position fixed .logo,
+z-inde: 1 .logo,
+background darkblue .logo,
+left 0 .logo,
+right 0 .logo,
+top 0 .logo,
+#top-menu a,
+position fixed a,
+z-inde: 1 a,
+background darkblue a,
+left 0 a,
+right 0 a,
+top 0 a {
+  transition: all;
+  -webkit-transition: all;
+  -moz-transition: all;
 }
 .logo {
   margin-top: 10px;
@@ -667,15 +674,15 @@ html {
 #about #lang >div p:hover {
   border-bottom: 2px solid #0a2334;
   margin-bottom: -2px;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  transition: all;
+  -webkit-transition: all;
+  -moz-transition: all;
 }
 .language1 {
   display: block;
 }
-.language {
-  display: none;
-}
+.language,
+display none,
 #work {
   *zoom: 1;
   display: block;
@@ -688,24 +695,38 @@ html {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.language:before,
+display none:before,
 #work:before,
+.language:after,
+display none:after,
 #work:after {
   content: '';
   display: table;
 }
+.language:after,
+display none:after,
 #work:after {
   clear: both;
 }
+.language:first-child,
+display none:first-child,
 #work:first-child {
   margin-left: auto;
 }
+.language:last-child,
+display none:last-child,
 #work:last-child {
   margin-right: auto;
 }
+.language h1,
+display none h1,
 #work h1 {
   color: #fff;
   text-align: center;
 }
+.language .gallery >img,
+display none .gallery >img,
 #work .gallery >img {
   *zoom: 1;
   float: left;
@@ -716,21 +737,33 @@ html {
   margin-right: 0%;
   padding: 10px;
 }
+.language .gallery >img:before,
+display none .gallery >img:before,
 #work .gallery >img:before,
+.language .gallery >img:after,
+display none .gallery >img:after,
 #work .gallery >img:after {
   content: '';
   display: table;
 }
+.language .gallery >img:after,
+display none .gallery >img:after,
 #work .gallery >img:after {
   clear: both;
 }
+.language .gallery >img:nth-child(4n),
+display none .gallery >img:nth-child(4n),
 #work .gallery >img:nth-child(4n) {
   float: right;
 }
+.language .gallery >img:nth-child(4n + 1),
+display none .gallery >img:nth-child(4n + 1),
 #work .gallery >img:nth-child(4n + 1) {
   clear: both;
 }
 @media only screen and (max-width: 800px) {
+  .language .gallery >img,
+  display none .gallery >img,
   #work .gallery >img {
     *zoom: 1;
     float: left;
@@ -740,28 +773,44 @@ html {
     margin-left: 0%;
     margin-right: 0%;
   }
+  .language .gallery >img:before,
+  display none .gallery >img:before,
   #work .gallery >img:before,
+  .language .gallery >img:after,
+  display none .gallery >img:after,
   #work .gallery >img:after {
     content: '';
     display: table;
   }
+  .language .gallery >img:after,
+  display none .gallery >img:after,
   #work .gallery >img:after {
     clear: both;
   }
+  .language .gallery >img:nth-child(2n),
+  display none .gallery >img:nth-child(2n),
   #work .gallery >img:nth-child(2n) {
     float: right;
   }
+  .language .gallery >img:nth-child(2n + 1),
+  display none .gallery >img:nth-child(2n + 1),
   #work .gallery >img:nth-child(2n + 1) {
     clear: both;
   }
+  .language .gallery >img:nth-child(4n),
+  display none .gallery >img:nth-child(4n),
   #work .gallery >img:nth-child(4n) {
     float: left;
   }
+  .language .gallery >img:nth-child(4n + 1),
+  display none .gallery >img:nth-child(4n + 1),
   #work .gallery >img:nth-child(4n + 1) {
     clear: none;
   }
 }
 @media only screen and (max-width: 600px) {
+  .language .gallery >img,
+  display none .gallery >img,
   #work .gallery >img {
     *zoom: 1;
     float: left;
@@ -771,17 +820,27 @@ html {
     margin-left: 0%;
     margin-right: 0%;
   }
+  .language .gallery >img:before,
+  display none .gallery >img:before,
   #work .gallery >img:before,
+  .language .gallery >img:after,
+  display none .gallery >img:after,
   #work .gallery >img:after {
     content: '';
     display: table;
   }
+  .language .gallery >img:after,
+  display none .gallery >img:after,
   #work .gallery >img:after {
     clear: both;
   }
+  .language .gallery >img:nth-child(2n),
+  display none .gallery >img:nth-child(2n),
   #work .gallery >img:nth-child(2n) {
     float: left;
   }
+  .language .gallery >img:nth-child(2n + 1),
+  display none .gallery >img:nth-child(2n + 1),
   #work .gallery >img:nth-child(2n + 1) {
     clear: none;
   }
